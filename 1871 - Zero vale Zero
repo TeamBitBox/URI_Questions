@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int m, n, r;
+	string r2;
+
+	while(true){
+		scanf("%d %d", &m, &n);
+
+		if(m == 0 && n == 0){
+			break;
+		}else{
+			r = m+n;
+
+			stringstream convert;
+
+			convert << r;
+
+			r2 = convert.str();
+
+			r2.erase(remove(r2.begin(), r2.end(), '0'), r2.end());
+
+			cout << r2 << endl;
+		}
+	}
+
+return 0;
+}
